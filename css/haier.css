@@ -1,0 +1,92 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+
+}
+
+body{
+	background-color: #131313;
+	font-size: 62.5%;
+	font-family: 'Myriad Pro','PingFang SC','Microsoft YaHei','Righteous',cursive,sans-serif;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+
+button{
+	outline: none;
+}
+li{
+	list-style: none;
+}
+/* @font-face{
+    font-family: 'Righteous' cursive;
+    src : url('../fonts/Righteous-Regular.ttf')format('embedded-opentype'),
+    url('../fonts/Righteous-Regular.ttf')format('woff'),
+    url('../fonts/Righteous-Regular.ttf')format('truetype'),
+    url('../fonts/Righteous-Regular.ttf')format('svg');
+} */
+@font-face {
+	font-family: 'Righteous';
+	src: url('fonts/Righteous-Regular.eot'); /* IE9 Compat Modes */
+	src: url('fonts/Righteous-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('fonts/Righteous-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+			 url('fonts/Righteous-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+			 url('onts/Righteous-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+			 url('fonts/Righteous-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+/*字体*/
+.Righteous{
+	font-family:  'Righteous', cursive;
+}
+
+header{
+	background-color: rgba(19,19,19,.55);
+	/*box-shadow: 0 6px 14px rgba(0,0,0,.3);*/
+	width: 100%;
+	height: 6em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	backdrop-filter: blur(40px) /*brightness(110%)*/ saturate(180%);
+	z-index: 9999;
+}
+.header-content{
+	max-height: 6em;
+	max-width: 120em;
+	margin: 0 auto;
+	display: flex;
+}
+.header-avtor{
+	height: 6em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.header-avtor a{
+	margin-top: .4em;
+}
+.header-avtor img{
+	color: #fff;
+	width: 10em;
+	height: 3em;
+}
+/*header*/
+.banner{
+	margin:6em 0;
+	width: 100%;
+}
+.banner img{
+	width: 100%;
+	height: auto;
+	/*transition: width 2s cubic-bezier(0.3, 0, 0, 1);*/
+}
