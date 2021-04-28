@@ -21,6 +21,7 @@ body{
 	font-weight: 200,500,700;
 	font-style: normal;
 	position: relative;
+	cursor: url('../icon/some-cursor.svg'),default;
 }
 a{
 	text-decoration: none;
@@ -340,15 +341,16 @@ main{
 	letter-spacing: 6px;
 	opacity: 0;
 	color: #caa772;
-	animation: fade-in 3s ease 0s 1;
+	animation:fade-in 3s ease 0s 1;
 }
+
 @keyframes fade-in {
-	0%{
-		opacity: 0;
-	}
-	100%{
-		opacity: 1;
-	}
+0%{
+	opacity: 0;
+}
+100%{
+	opacity: 1;
+}
 }
 .opening-words span{
 	font-size: 3em;
@@ -825,6 +827,20 @@ footer{
 		align-items: flex-start;
 		padding-left: 4em;
 	}
+
+	#showCase h1{
+		font-size: 4em;
+	}
+	#aboutMe h1 {
+		font-size: 4em;
+	}
+	.project-title h1, .showCase-title h1, .aboutMe-title h1{
+		font-size: 4em;
+	}
+	.project-title img, .showCase-title img, .aboutMe-title img{
+		width: 6em;
+		height: 6em;
+	}
 	.prototype{
 		margin-top:3em;
 	}
@@ -863,6 +879,7 @@ footer{
 		flex-flow: column;
 		align-items: flex-start;
 	}
+
 }
 @media screen and (min-width:1200px) and (max-width:1440px){
 	.header-content{
@@ -871,4 +888,5 @@ footer{
 	main{
 		width: 100em;
 	}
+
 }
