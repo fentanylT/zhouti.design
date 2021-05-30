@@ -21,6 +21,7 @@ body{
 	font-weight: 200,500,700;
 	font-style: normal;
 	position: relative;
+	cursor: url('../icon/some-cursor.svg'),default;
 }
 a{
 	text-decoration: none;
@@ -337,20 +338,27 @@ main{
 .opening-words h1{
 	font-size: 6em;
 	font-weight: 700;
-	/* font-family: 'Righteous'; */
 	letter-spacing: 6px;
 	opacity: 0;
 	color: #caa772;
-	transition: all 1.5s ease;
+	animation:fade-in 3s ease 0s 1;
+}
+
+@keyframes fade-in {
+0%{
+	opacity: 0;
+}
+100%{
+	opacity: 1;
+}
 }
 .opening-words span{
 	font-size: 3em;
 	font-weight: 200;
-	/* font-family: 'Righteous'; */
 	letter-spacing: 3px;
 	opacity: 0;
 	color: #fff;
-	transition: all 1.5s ease;
+	animation: fade-in 4s ease 0s 1;
 }
 .opening-words h1,.opening-words span{
 	opacity: 1;
@@ -584,13 +592,22 @@ main{
 	letter-spacing: 1.2px;
 	margin-bottom: .6em;
 }
-
-/* .project-description button{
-	font-size: 1.8em;
-	color: #caa772;
-	border: none;
-	background-color: rgba(255,255,255,.0);
-} */
+.project-cycle{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	margin-top: .6em;
+}
+.project-cycle img{
+	width: 1.8em;
+	height: 1.8em;
+}
+.project-cycle span{
+	font-size: 1.6em;
+	font-weight: 200;
+	color: #fff;
+	padding-left: 8px;
+}
 .prototype{
 	padding: 1em 2em;
 	display: flex;
@@ -670,7 +687,7 @@ main{
 }*/
 .showCase-name{
 	display: inline-block;
-	font-size: 1.6em;
+	font-size: 1.4em;
 	font-weight: 200;
 	line-height: 1.6em;
 	border-radius: 6px;
@@ -723,11 +740,14 @@ main{
 } */
 
 .aboutMe-main{
-	font-size: 3em;
+	font-size: 2.6em;
 	color: #858585;
 }
 .aboutMe-main p{
 	margin-bottom: 1em;
+}
+.aboutMe-main > ul > li{
+	line-height: 2em;
 }
 
 
@@ -772,6 +792,10 @@ footer{
 	height: 3em;
 	margin-right: 0.8em;
 }
+.aboutMe-main > ul > li{
+	font-weight: 200;
+	font-size: 1em;
+}
 
 @media screen and (max-width:818px) {
 	.header-content{
@@ -784,6 +808,42 @@ footer{
 	main{
 		width: 80%;
 	}
+	.title-work{
+		height: 100%;
+		width: 100%;
+	}
+	.title-work a{
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: flex-start;
+		padding: 6em 0;
+		height: 100%;
+		width: 100%;
+	}
+	.project-description{
+		height: 100%;
+		display: flex;
+		flex-flow: column;
+		align-items: flex-start;
+		padding-left: 4em;
+	}
+
+	#showCase h1{
+		font-size: 4em;
+	}
+	#aboutMe h1 {
+		font-size: 4em;
+	}
+	.project-title h1, .showCase-title h1, .aboutMe-title h1{
+		font-size: 4em;
+	}
+	.project-title img, .showCase-title img, .aboutMe-title img{
+		width: 6em;
+		height: 6em;
+	}
+	.prototype{
+		margin-top:3em;
+	}
 	.project-description-first{
 		width: 100%;
 	}
@@ -795,7 +855,6 @@ footer{
 		flex-direction: column;
 		align-content: space-between;
 		margin-bottom: 0em;
-
 	}
 	#showCase ol > li {
 		margin-bottom: 6em;
@@ -804,4 +863,30 @@ footer{
 	.showCase-list-description{
 		display: none;
 	}
+}
+
+@media screen and (max-width:1200px) and (min-width:819px){
+	.header-content{
+		width: 80%;
+	}
+	main{
+		width: 80%;
+	}
+	.showCase-list-description h2{
+		font-size:2em;
+	}
+	.footer-content{
+		flex-flow: column;
+		align-items: flex-start;
+	}
+
+}
+@media screen and (min-width:1200px) and (max-width:1440px){
+	.header-content{
+		width: 100em;
+	}
+	main{
+		width: 100em;
+	}
+
 }
