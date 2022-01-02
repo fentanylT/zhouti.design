@@ -10,16 +10,14 @@ html,body{
 }
 
 body{
-	background-color: #131313;
 	font-size: 62.5%;
-	font-family: 'Myriad Pro','PingFang SC','Microsoft YaHei','Righteous',cursive,sans-serif;
 }
 a{
 	text-decoration: none;
 }
-a:hover{
+/* a:hover{
 	text-decoration: underline;
-}
+} */
 
 button{
 	outline: none;
@@ -27,66 +25,158 @@ button{
 li{
 	list-style: none;
 }
-/* @font-face{
-    font-family: 'Righteous' cursive;
-    src : url('../fonts/Righteous-Regular.ttf')format('embedded-opentype'),
-    url('../fonts/Righteous-Regular.ttf')format('woff'),
-    url('../fonts/Righteous-Regular.ttf')format('truetype'),
-    url('../fonts/Righteous-Regular.ttf')format('svg');
-} */
-@font-face {
-	font-family: 'Righteous';
-	src: url('fonts/Righteous-Regular.eot'); /* IE9 Compat Modes */
-	src: url('fonts/Righteous-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			 url('fonts/Righteous-Regular.woff2') format('woff2'), /* Super Modern Browsers */
-			 url('fonts/Righteous-Regular.woff') format('woff'), /* Pretty Modern Browsers */
-			 url('onts/Righteous-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-			 url('fonts/Righteous-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-/*字体*/
-.Righteous{
-	font-family:  'Righteous', cursive;
-}
 
-header{
-	background-color: rgba(19,19,19,.55);
-	/*box-shadow: 0 6px 14px rgba(0,0,0,.3);*/
+/* 内容区 */
+content{
 	width: 100%;
-	height: 6em;
-	position: fixed;
-	top: 0;
-	left: 0;
-	backdrop-filter: blur(40px) /*brightness(110%)*/ saturate(180%);
-	z-index: 9999;
+	height: 100%;
+	/* padding: 6% 8%; */
+	display: block;
+	background-color: #D0E9FF;
 }
-.header-content{
-	max-height: 6em;
-	max-width: 120em;
-	margin: 0 auto;
+main{
+	width: 100%;
+	height: 100%;
+	background-color: #F3F8FF;
 	display: flex;
+	flex-flow: row nowrap;
 }
-.header-avtor{
-	height: 6em;
+.mainLeft{
+	background:linear-gradient(135deg, #FFF3E7 0%, #E2F7FF 100%);
+	height: 100%;
+	width: 40%;
+	flex-grow: 1;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-flow: row nowrap;
+}
+.leftNav{
+	height: 100%;
+	width: 30%;
+	background-color: rgba(255,255,255,.5);
+	display: flex;
+	flex-flow:column;
 	justify-content: center;
 }
-.header-avtor a{
-	margin-top: .4em;
+.menuStyle{
+	display: flex;
+	flex-flow: row;
+	align-items:center;
+	padding: 1rem 0;
 }
-.header-avtor img{
-	color: #fff;
-	width: 10em;
-	height: 3em;
+.border{
+	width: 30px;
+	height: 2px;
+	background-color: #A2BBD0;
 }
-/*header*/
-.banner{
-	margin:6em 0;
-	width: 100%;
+.menuText{
+	display: flex;
+	flex-flow: column nowrap;
+	padding-left: 8px;
 }
-.banner img{
-	width: 100%;
-	height: auto;
-	/*transition: width 2s cubic-bezier(0.3, 0, 0, 1);*/
+.menuText h6{
+	font-size: 0.8rem;
+	font-weight: bold;
+	color:#A2BBD0;
+}
+.menuText span{
+	font-size: .6rem;
+	font-weight: normal;
+	color: #A2BBD0;
+}
+/* 悬停效果 */
+.menuStyle:hover > .border{
+	width: 40px;
+	height: 4px;
+	background-color: #7AC1FF;
+	transition: .3s ease-in-out;
+}
+.menuStyle:hover > .menuText > h6{
+	font-size: 1.2rem;
+	color: #7AC1FF;
+}
+.menuStyle:hover > .menuText > span{
+	font-size: 1rem;
+	color: #7AC1FF;
+}
+.leftDescription{
+	height: 100%;
+	width: 70%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+	justify-content: center;
+	padding:0 3rem;
+}
+.leftDescription h4{
+	font-size: 2.2rem;
+	font-weight: bold;
+	color:#2283E2;
+	padding-top: 2rem;
+}
+.HaierBrand img{
+	width: 120px;
+	height: 120px;
+	box-shadow: 0px 4px 20px 4px rgba(219, 219, 219, 0.3);
+	border-radius: 22px;
+}
+.projectDate{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	padding-top: 1rem;
+}
+.projectDate img{
+	width: 20px;
+	height: 20px;
+}
+.projectDate span{
+	font-size: 1rem;
+	color: #A2BBD0;
+	line-height: 16px;
+	padding-left: 10px;
+	display: flex;
+	align-items: center;
+}
+.leftDescription p{
+	font-size: 1rem;
+	line-height: 1.8rem;
+	font-weight: normal;
+	color:#7AC1FF;
+	padding-top: 2rem;
+}
+.leftDescriptionBtn{
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	width:144px;
+	height: 50px;
+	background-color: #fff;
+	box-shadow: 0px 4px 20px 4px rgba(219, 219, 219, 0.3);
+	border-radius: 10px;
+	margin-top: 2rem;
+}
+.leftDescriptionBtn span{
+	padding-right: 10px;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color:#7AC1FF;
+}
+.leftDescriptionBtn img{
+	width: 14px;
+	height: 14px;
+	color: #7AC1FF;
+}
+.mainRight{
+	height: 100%;
+	width: 60%;
+	background-color: #F3F8FF;
+	flex-grow: 2;
+	background-image: url(../img/haier-1.png);
+	background-size: cover;
+}
+/* 第二页 */
+.projectBackground{
+	background-image: url(../img/haier-2-bg.png);
+	background-size: cover;
 }
